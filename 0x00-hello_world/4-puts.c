@@ -3,6 +3,7 @@
  * main - Entry point
  *
  * puts - prints out text on the console
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
