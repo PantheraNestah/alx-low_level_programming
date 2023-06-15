@@ -3,10 +3,11 @@
 #include <sys/syscall.h>
 /**
  * main - Entry point
+ * Return - always true(1)
  **/
-int main()
+int main(void)
 {
-    const char* message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
     syscall(SYS_write, STDERR_FILENO, message, strlen(message));
-    return 1;
+    return (1);
 }
