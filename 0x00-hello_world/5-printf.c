@@ -1,5 +1,9 @@
 #include <stdio.h>
-/*printing out text on the console with printf*/
+/**
+ * main - Entry point
+ * 
+ * printf prints out text on the console
+ */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
