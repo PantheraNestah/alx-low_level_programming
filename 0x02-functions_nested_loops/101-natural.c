@@ -1,21 +1,8 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * main - Entry point
- * print_number - prints integer argumen n after convertion to character
- * @n: integer argument passed to print_number function
  * Return: Always 0(Success)
  */
-void print_number(int n)
-{
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-	if (n / 10)
-		print_number(n / 10);
-	_putchar('0' + n % 10);
-}
 int main(void)
 {
 	int sum = 0;
@@ -28,7 +15,6 @@ int main(void)
 			sum += i;
 		}
 	}
-	print_number(sum);
-	_putchar('\n');
+	printf("%d\n", sum);
 	return (0);
 }
