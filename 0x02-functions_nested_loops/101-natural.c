@@ -1,13 +1,14 @@
 #include "main.h"
 /**
  * main - Entry point
- * print_number - converts integer to character and prints it out
+ * print_number - prints integer argumen n after convertion to character
  * @n: integer argument passed to print_number function
  * Return: Always 0(Success)
  */
 void print_number(int n)
 {
-	if (n < 0) {
+	if (n < 0)
+	{
 		_putchar('-');
 		n = -n;
 	}
@@ -19,12 +20,11 @@ int main(void)
 {
 	int sum = 0;
 	int i;
-
-    	for (i = 1; i < 1024; i++)
+	for (i = 1; i < 1024; i++)
 	{
-        	if (i % 3 == 0 || i % 5 == 0)
+		if (i % 3 == 0 || i % 5 == 0)
 		{
-            		sum += i;
+			sum += i;
 		}
 	}
 	print_number(sum);

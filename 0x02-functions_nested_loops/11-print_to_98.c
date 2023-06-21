@@ -1,13 +1,14 @@
 #include "main.h"
 /**
  * print_to_98 - prints integers from n to 98
- * print_number - converts integer to character and prints it
- * @num: integer argument passed to print_number function
+ * print_number - converts integer parameter num to character and prints it
+ * @num: integer argument passed to print_number function to be printed
  * @n: integer argument passed to print_to_98 function
  */
 void print_number(int num)
 {
-	if (num < 0) {
+	if (num < 0)
+	{
 		_putchar('-');
 		num = -num;
 	}
