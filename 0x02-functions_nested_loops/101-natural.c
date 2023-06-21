@@ -3,6 +3,7 @@
  * main - Entry point
  * print_number - converts integer to character and prints it out
  * @n: integer argument passed to print_number function
+ * Return: Always 0(Success)
  */
 void print_number(int n)
 {
@@ -14,11 +15,12 @@ void print_number(int n)
 		print_number(n / 10);
 	_putchar('0' + n % 10);
 }
-void main(void)
+int main(void)
 {
 	int sum = 0;
+	int i;
 
-    	for (int i = 1; i < 1024; i++)
+    	for (i = 1; i < 1024; i++)
 	{
         	if (i % 3 == 0 || i % 5 == 0)
 		{
@@ -27,4 +29,5 @@ void main(void)
 	}
 	print_number(sum);
 	_putchar('\n');
+	return (0);
 }
