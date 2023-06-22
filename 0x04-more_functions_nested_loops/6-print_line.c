@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_line - prints character _ n times
- * @n - number of times the character _ is printed
+ * @n: number of times the character _ is printed
  * _putchar - prints character
  */
 void print_line(int n)
