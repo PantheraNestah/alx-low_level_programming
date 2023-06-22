@@ -1,1 +1,1 @@
-C code debugging project
+Practicing c debugging 
