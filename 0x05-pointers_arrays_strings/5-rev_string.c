@@ -7,20 +7,16 @@
  */
 void rev_string(char *s)
 {
-	int len = (int)strlen(s) - 1;
-	char *reversed = malloc((len) * sizeof(char));
-	int i = 0;
+	int len = (int)strlen(s) - 1, i = 0;
+	char front, back;
 
-	while (len >= 0)
+	while (len > i)
 	{
-		reversed[i] = s[len];
+		front = s[i];
+		back = s[len];
+		s[i] = back;
+		s[len] = front;
 		len--;
 		i++;
-	}
-	len = len + 1;
-	while (len < (int)strlen(reversed))
-	{
-		s[len] = reversed[len];
-		len++;
 	}
 }
