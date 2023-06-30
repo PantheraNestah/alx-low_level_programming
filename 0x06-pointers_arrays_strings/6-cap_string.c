@@ -8,17 +8,28 @@
  */
 char *cap_string(char *ch)
 {
-	char sep[];
+	int i = 0;
 
-	sep = {' ', '	', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-	int i = 0, j, len = (int)strlen(ch) - 1;
-
-	while (i < len)
+	while (ch[i] != '\0')
 	{
-		for (j = 0; j < (int)(sizeof(sep) / sizeof(char)); j++)
+		if ((ch[i - 1] == ' ' || ch[i - 1] == '\n'
+		|| ch[i - 1] == '\t' || ch[i - 1] == ','
+		|| ch[i - 1] == ';' || ch[i - 1] == '!'
+		|| ch[i - 1] == '?' || ch[i - 1] == '"'
+		|| ch[i - 1] == '(' || ch[i - 1] == ')'
+		|| ch[i - 1] == '{' || ch[i - 1] == '}'
+		|| ch[i - 1] == '.')
+		&& (ch[i] >= 'a' && ch[i] <= 'z'))
 		{
-			if (ch[i] == sep[j])
-				ch[i + 1] = toupper(ch[i + 1]);
+			ch[i] = ch[i] - 32;
+		}
+		else if ((ch[0] >= 97 && ch[0] <= 122))
+		{
+			ch[0] = ch[0] - 32;
+		}
+		else
+		{
+			ch[i] = ch[i];
 		}
 		i++;
 	}

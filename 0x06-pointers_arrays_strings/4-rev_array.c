@@ -6,20 +6,15 @@
  */
 void reverse_array(int *a, int n)
 {
-	int front = 0, temp, back, mid;
+	int front = 0, temp;
 
 	n--;
-	back = n;
-	if (n % 2 == 0)
-		mid = n / 2;
-	else
-		mid = (n / 2) + 1;
-	while (front < mid || back >= mid)
+	while (front < n)
 	{
+		n--;
 		temp = a[front];
-		a[front] = a[back];
-		a[back] = temp;
+		a[front] = a[n];
+		a[n] = temp;
 		front++;
-		back--;
 	}
 }
