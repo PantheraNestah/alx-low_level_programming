@@ -4,6 +4,7 @@
  * _strchr - locates a character in a string
  * @s: character pointer to string to locate character
  * @c: character to be located in the string
+ * Return: pointer to char marching c
  */
 char *_strchr(char *s, char c)
 {
