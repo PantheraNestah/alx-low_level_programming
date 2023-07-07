@@ -1,0 +1,27 @@
+==> 4-add.c <==
+/**
+ * testInt - tests if comand line argument is a digit
+ * @iptr: integer argument size of character array
+ * @cptr: pointer to character pointer
+ * Return: true on success, false on failure
+ */
+int testInt(int iptr, char **cptr)
+{
+	int i = 1, state;
+
+	while (i++ < iptr)
+	{
+		if (isdigit(cptr[i]))
+		{
+			state = 1;
+		}
+		else
+		{
+			state = 0;
+			break;
+		}
+	}
+	return (state);
+}
+
+==> testInt.c <==
