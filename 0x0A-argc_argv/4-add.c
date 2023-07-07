@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * testInt - tests if comand line argument is a digit
  * @iptr: integer argument size of character array
@@ -9,21 +10,17 @@
  */
 int testInt(int iptr, char **cptr)
 {
-	int i = 1, state;
+	int i = 1, j;
 
-	while (i++ < iptr)
+	for (; i < (iptr - 1); i++)
 	{
-		if (isdigit(cptr[i]))
+		for (j = 0; *cptr[i] != '\0' && j < (int) strlen(cptr[i]); j++)
 		{
-			state = 1;
-		}
-		else
-		{
-			state = 0;
-			break;
+			if (isdigit(cptr[i][j]) == 0)
+				return (1);
 		}
 	}
-	return (state);
+	return (0);
 }
 /**
  * main - entry point
@@ -33,24 +30,15 @@ int testInt(int iptr, char **cptr)
  */
 int main(int argc, char **argv)
 {
-	int count = 1, sum;
+	int count = 1, sum = 0;
 
-	if (argc < 2)
-	{
-		printf("0\n");
-	}
-	if (testInt(argc, argv))
-	{
-		while (count++ < (argc - 1))
-		{
-			sum += atoi(argv[count]);
-		}
-		printf("%d\n", sum);
-	}
-	else if(!testInt(argc, argv))
+	if (testInt(argc, argv) == 1)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	for (; count < argc; count++)
+		sum += atoi(argv[count]);
+	printf("%d\n", sum);
 	return (0);
 }

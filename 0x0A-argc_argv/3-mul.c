@@ -8,6 +8,8 @@
  */
 int main(int argc, char **argv)
 {
+	int opr1, opr2;
+
 	if (argc < 2)
 	{
 		printf("Error\n");
@@ -15,9 +17,9 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		long int prod = (atol(argv[1])) * atol(argv[2]);
-
-		printf("%ld\n", prod);
+		opr1 = atoi(argv[1]);
+		opr2 = atoi(argv[2]);
+		printf("%d\n", opr1 * opr2);
 	}
 	return (0);
 
