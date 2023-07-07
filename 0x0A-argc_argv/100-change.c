@@ -4,15 +4,14 @@
 #include <string.h>
 /**
  * intCheck - checks for valid input
- * @argc: argument count
- * @i: counter for argv[]
- * @j: counter for argv[][]
+ * @argc: argument counter
  * @argv: argument vector
  * Return: 0 on success, 1 on failure
  */
 int intCheck(int argc, char **argv)
 {
 	int i = 1, j = 0;
+
 	for (i = 1; i < argc; i++)
 		for (j = 0; *argv[i] != '\0' && j < (int) strlen(argv[i]); j++)
 			if (isdigit(argv[i][j]) == 0)
