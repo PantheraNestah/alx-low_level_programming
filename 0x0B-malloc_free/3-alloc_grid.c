@@ -10,8 +10,8 @@
 int **alloc_grid(int width, int height)
 {
 	int **darr = (int **)calloc(height, sizeof(int *)), i = 0;
-	
-	for(; i < height; i++)
+
+	for (; i < height; i++)
 	{
 		darr[i] = (int *)calloc(width, sizeof(int));
 	}

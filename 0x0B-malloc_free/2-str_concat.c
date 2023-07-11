@@ -14,13 +14,17 @@ char *str_concat(char *s1, char *s2)
 	int len3 = len1 + len2, i = 0;
 	char *arr = (char *)malloc(len3 * sizeof(char));
 
+	if (s1 == NULL)
+		s1 = "";
 	for (; i <= len1; i++)
 	{
 		arr[i] = s1[i];
 	}
 	i = i - 1;
 	len1 = 0;
-	for (; len1 < len2; len1++, i++)
+	if (s2 == NULL)
+		s2 = "";
+	for (; len1 <= len2; len1++, i++)
 	{
 		arr[i] = s2[len1];
 	}
