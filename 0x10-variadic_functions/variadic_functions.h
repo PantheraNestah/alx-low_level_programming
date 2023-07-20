@@ -9,7 +9,11 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-#define VALIDTYPESCONDITIONAL(i) (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's')
+/**
+ * struct validTypes - stores type and corresponding function pointer
+ * @valid: character pointer member to valid type
+ * @f: function pointer member to corresponding function
+ */
 
 typedef struct validTypes
 {
