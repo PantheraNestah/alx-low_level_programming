@@ -1,10 +1,9 @@
 #include "lists.h"
 
-/*
+/**
  * free_list - frees memory allocated for the linked list
- * @head: head pointer of list to free
+ * @head: head pointer to linked list
  */
-
 void free_list(list_t *head)
 {
 	list_t *temp, *temp1;
